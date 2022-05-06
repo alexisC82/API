@@ -41,7 +41,7 @@ class tutoController extends abstractController
               break;
         }
 
-        $tutos = $manager->findAll($a, $b);
+        $tutos = $manager->findAllPagination($a, $b);
 
         return $this->jsonResponse($tutos, 200);
     }
